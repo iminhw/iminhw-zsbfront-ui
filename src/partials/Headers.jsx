@@ -5,70 +5,70 @@ import {Link} from 'react-router-dom';
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
+  // ChartBarIcon,
+  // CursorClickIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
+  // PhoneIcon,
+  // PlayIcon,
+  // RefreshIcon,
+  // ShieldCheckIcon,
   SupportIcon,
-  ViewGridIcon,
+  // ViewGridIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import logo from '@/images/favicon.png'
-const solutions = [
-  {
-    name: '分析',
-    description: '更好的了解您的交通来自哪里。',
-    href: '#',
-    icon: ChartBarIcon,
-  },
-  {
-    name: '约谈',
-    description: '以更有意义的方式直接与客户交谈',
-    href: '#',
-    icon: CursorClickIcon,
-  },
-  { name: '安全', description: "客户的数据是安全可靠的。", href: '#', icon: ShieldCheckIcon },
-  {
-    name: '集成',
-    description: "联军您需要使用的第三方工具",
-    href: '#',
-    icon: ViewGridIcon,
-  },
-  {
-    name: '自动化',
-    description: '建立战斗策略，推动您的客户转换。',
-    href: '#',
-    icon: RefreshIcon,
-  },
-]
+// const solutions = [
+//   {
+//     name: '分析',
+//     description: '更好的了解您的交通来自哪里。',
+//     href: '#',
+//     icon: ChartBarIcon,
+//   },
+//   {
+//     name: '约谈',
+//     description: '以更有意义的方式直接与客户交谈',
+//     href: '#',
+//     icon: CursorClickIcon,
+//   },
+//   { name: '安全', description: "客户的数据是安全可靠的。", href: '#', icon: ShieldCheckIcon },
+//   {
+//     name: '集成',
+//     description: "联军您需要使用的第三方工具",
+//     href: '#',
+//     icon: ViewGridIcon,
+//   },
+//   {
+//     name: '自动化',
+//     description: '建立战斗策略，推动您的客户转换。',
+//     href: '#',
+//     icon: RefreshIcon,
+//   },
+// ]
 // const callsToAction = [
 //   { name: '观看演示', href: '#', icon: PlayIcon },
 //   { name: '联系销售', href: '#', icon: PhoneIcon },
 // ]
 const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+    name: '帮助中心',
+    description: '在没有充斥推销信息的QQ群里面寻求帮助',
+    href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
     icon: SupportIcon,
   },
   {
-    name: '指南',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+    name: '使用指南',
+    description: '点击入群查看详细使用方案',
+    href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
     icon: BookmarkAltIcon,
   },
   {
-    name: '事件',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+    name: 'BUG反馈',
+    description: '点击入群向开发者反馈您碰到的问题',
+    href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
     icon: CalendarIcon,
   },
-  { name: '安全', description: '了解我们如何对待您的隐私.', href: '#', icon: ShieldCheckIcon },
+  // { name: '安全', description: '我们将您的隐私加密处理.', href: '#', icon: ShieldCheckIcon },
 ]
 const recentPosts = [
   { id: 1, name: '2022年成都航空职业技术学院录取与通知书邮寄进度查询', href: 'https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/zsbzsdt/202207/t20220711_132960.html' },
@@ -188,7 +188,7 @@ export default function Headers() {
               录取查询
             </Link>
             <Link to="/advice" className="text-base font-medium text-gray-500 hover:text-gray-900">
-            通知书单号查询
+              通知书单号查询
             </Link>
 
             <Popover className="relative">
@@ -236,7 +236,7 @@ export default function Headers() {
                             </a>
                           ))}
                         </div>
-                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                        {/* <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
                           <div>
                             <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">最近的帖子</h3>
                             <ul role="list" className="mt-4 space-y-4">
@@ -255,7 +255,7 @@ export default function Headers() {
                               查看所有的帖子 <span aria-hidden="true">&rarr;</span>
                             </a>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -332,7 +332,7 @@ export default function Headers() {
                   录取查询
                 </Link>
 
-                <Link to="/a" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                <Link to="/advice" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   通知书单号查询
                 </Link>
                 {resources.map((item) => (

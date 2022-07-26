@@ -45,66 +45,66 @@ function Footer() {
 
           {/* 2nd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="mb-2 font-medium text-gray-800">Products</h6>
+            <h6 className="mb-2 font-medium text-gray-800">录取专业查询</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Web Studio</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口1</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">DynamicBox Flex</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口2</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Programming Forms</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口3</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Integrations</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口4</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Command-line</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口5</Link>
               </li>
             </ul>
           </div>
 
           {/* 3rd block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="mb-2 font-medium text-gray-800">Resources</h6>
+            <h6 className="mb-2 font-medium text-gray-800">录取专业查询</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Documentation</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口1</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Tutorials & Guides</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口2</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Blog</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口3</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Support Center</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口4</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Partners</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口5</Link>
               </li>
             </ul>
           </div>
 
           {/* 4th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="mb-2 font-medium text-gray-800">Company</h6>
+            <h6 className="mb-2 font-medium text-gray-800">通知书单号查询</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Home</Link>
+                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口1</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">About us</Link>
+                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口2</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Company values</Link>
+                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口3</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Pricing</Link>
+                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口4</Link>
               </li>
               <li className="mb-2">
-                <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Privacy Policy</Link>
+                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口5</Link>
               </li>
             </ul>
           </div>
@@ -112,7 +112,7 @@ function Footer() {
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
             <h6 className="mb-2 font-medium text-gray-800">需要帮助？</h6>
-            <p className="mb-4 text-sm text-gray-600">请给我发一封友好说明您问题的邮件</p>
+            <p className="mb-4 text-sm text-gray-600">请给开发者发一封友好说明您问题的邮件</p>
             <form onSubmit={handleSeedEm}>
               <div className="flex flex-wrap mb-4">
                 <div className="w-full">

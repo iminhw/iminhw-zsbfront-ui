@@ -50,7 +50,7 @@ function Advice() {
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
 
               {/* Page header */}
-              <div className="max-w-3xl pb-12 mx-auto text-center md:pb-20">
+              <div className="max-w-3xl pb-12 mx-auto text-center md:pb-20 " data-aos="zoom-y-out" data-aos-delay="50">
                 <h2 className="h2">输入您的考生号或高考报名号，可以查询您通知书快递单号</h2>
               </div>
 
@@ -58,20 +58,20 @@ function Advice() {
               <div className="max-w-sm mx-auto">
                 <form method='post' onSubmit={()=>false}>
                   <div className="flex flex-wrap mb-4 -mx-3">
-                    <div className="w-full px-3">
+                    <div className="w-full px-3" data-aos="zoom-y-out" data-aos-delay="150">
                       <label className="block mb-1 text-sm font-medium text-gray-800" htmlFor="ksh">考生号</label>
                       <input id="ksh" type="text" className="w-full text-gray-800 form-input" placeholder="请输入您的考生号" required />
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap mt-6 -mx-3">
+                  <div className="flex flex-wrap mt-6 -mx-3" data-aos="zoom-y-out" data-aos-delay="250">
                     <div className="w-full px-3">
                       <button type='button' onClick={handleSubmit} className="w-full text-white bg-blue-600 btn hover:bg-blue-700">查 询</button>
                     </div>
                   </div>
                 </form>
 
-                <div className="mt-6 text-left text-gray-500">
+                <div className="mt-6 text-left text-gray-500" data-aos="zoom-y-out" data-aos-delay="450">
                  <ol className="leading-relaxed list-decimal font-extralight">
                   <li>
                     因为一些原因导致手机号查不到通知书？<p>我们提供这个功能给您查询你的通知书快递单号。</p>
@@ -93,7 +93,7 @@ function Advice() {
       </main>
 
       {/*  Site footer */}
-      <Footer />
+      <Footer  />
     </div>
   );
 }
