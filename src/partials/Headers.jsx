@@ -226,6 +226,7 @@ export default function Headers() {
                             <a 
                               key={item.name}
                               href={item.href}
+                              target="_blank"
                               className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
                             >
                               <item.icon className="flex-shrink-0 w-6 h-6 text-indigo-600" aria-hidden="true" />
