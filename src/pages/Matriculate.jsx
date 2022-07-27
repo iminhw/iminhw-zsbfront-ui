@@ -6,6 +6,7 @@ import Footer from '@/partials/Footer';
 import Swal from 'sweetalert2'
 
 import { getMatriculate } from '@/api/getmat'
+// import { encrypt, decrypt } from "@/utils/jsencrypt";
 
 
 function Matriculate() {
@@ -21,8 +22,6 @@ function Matriculate() {
     return false;
   }
     getMatriculate(ksh).then((response) => {
-      console.log(response)
-      console.log(response.data)
       if (response.data){
         const data = response.data;
         Swal.fire({

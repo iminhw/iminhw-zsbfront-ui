@@ -1,5 +1,7 @@
-import axios from 'axios'
-import errorCode from '@/utils/errorCode'
+import axios from 'axios';
+import errorCode from '@/utils/errorCode';
+import Swal from 'sweetalert2';
+import { decrypt } from "./cryptojs";
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 创建axios实例
@@ -48,29 +50,12 @@ service.interceptors.request.use(config => {
     config.params = {};
     config.url = url;
   }
-  if (!isRepeatSubmit && (config.method === 'post' || config.method === 'put')) {
-    const requestObj = {
-      url: config.url,
-      data: typeof config.data === 'object' ? JSON.stringify(config.data) : config.data,
-      time: new Date().getTime()
-    }
-    // const sessionObj = cache.session.getJSON('sessionObj')
-    if (sessionObj === undefined || sessionObj === null || sessionObj === '') {
-      // cache.session.setJSON('sessionObj', requestObj)
-    } else {
-      const s_url = sessionObj.url;                // 请求地址
-      const s_data = sessionObj.data;              // 请求数据
-      const s_time = sessionObj.time;              // 请求时间
-      const interval = 1000;                       // 间隔时间(ms)，小于此时间视为重复提交
-      if (s_data === requestObj.data && requestObj.time - s_time < interval && s_url === requestObj.url) {
-        const message = '数据正在处理，请勿重复提交';
-        console.warn(`[${s_url}]: ` + message)
-        return Promise.reject(new Error(message))
-      } else {
-        // cache.session.setJSON('sessionObj', requestObj)
-      }
-    }
+  if (config.method === 'post' || config.method === 'put') {
+
+    config.data = typeof config.data === 'object' ? JSON.stringify(config.data) : config.data;
+
   }
+  // console.log(config)
   return config
 }, error => {
     console.log(error)
@@ -79,29 +64,33 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(res => {
+
     // 未设置状态码则默认成功状态
     const code = res.data.code || 200;
     // 获取错误信息
-    const msg = errorCode[code] || res.data.msg || errorCode['default']
+    const msg = errorCode[code] || res.data.message || errorCode['default']
     // 二进制数据则直接返回
     if(res.request.responseType ===  'blob' || res.request.responseType ===  'arraybuffer'){
-      return res.data
+      return JSON.parse(decrypt(res.data));
     }
-    if (code === 401) {
-
-      return Promise.reject('无效的会话，或者会话已过期，请重新登录。')
-    } else if (code === 500) {
-     
+    if (code === 500) {
+      Swal.fire({
+        toast: true,
+        title: msg,
+        position: 'top',
+        icon: "error",
+        timer: 3000,
+        showConfirmButton: false,
+      });
       return Promise.reject(new Error(msg))
     } else if (code !== 200) {
-     
       return Promise.reject('error')
     } else {
-      return  Promise.resolve(res.data)
+      return  Promise.resolve(JSON.parse(decrypt(res.data)))
     }
   },
   error => {
-    console.log('err' + error)
+    console.log('error' + error)
     let { message } = error;
     if (message == "Network Error") {
       message = "后端接口连接异常";
@@ -112,12 +101,15 @@ service.interceptors.response.use(res => {
     else if (message.includes("Request failed with status code")) {
       message = "系统接口" + message.substr(message.length - 3) + "异常";
     }
-    // ElMessage({
-    //   message: message,
-    //   type: 'error',
-    //   duration: 5 * 1000
-    // })
-    console.log(message)
+    Swal.fire({
+      toast: true,
+      title: message,
+      position: 'top',
+      icon: "error",
+      timer:  5 * 1000,
+      showConfirmButton: false,
+    });
+    // console.log(message);
     return Promise.reject(error)
   }
 )

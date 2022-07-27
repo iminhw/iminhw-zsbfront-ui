@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from "@/utils/request";
 
 // // 查询录取数据列表
 // export function listMatriculate(query) {
@@ -12,16 +12,25 @@ import request from '@/utils/request'
 // // 查询录取数据详细
 export function getMatriculate(ksh) {
   return request({
-    url: '/stu/matriculate/' + ksh,
-    method: 'get'
-  })
+    url: "/stu/matriculate/" + ksh,
+    method: "get",
+  });
 }
 
 export function getMatKddh(ksh) {
   return request({
-    url: '/stu/outnotification/' + ksh,
-    method: 'get'
-  })
+    url: "/stu/outnotification/" + ksh,
+    method: "get",
+  });
+}
+
+export function validTest(data) {
+  console.log(data)
+  return request({
+    url: "/stu/test",
+    method: "post",
+    data: data,
+  });
 }
 
 // export function getMatriculate(data) {

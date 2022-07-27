@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, React, useState, useEffect } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -68,7 +68,12 @@ const resources = [
     href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
     icon: CalendarIcon,
   },
-  // { name: '安全', description: '我们将您的隐私加密处理.', href: '#', icon: ShieldCheckIcon },
+  // {
+  //   name: '安全',
+  //   description: '我们将您的隐私加密处理返回',
+  //   href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
+  //   icon: ShieldCheckIcon
+  // },
 ]
 const recentPosts = [
   { id: 1, name: '2022年成都航空职业技术学院录取与通知书邮寄进度查询', href: 'https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/zsbzsdt/202207/t20220711_132960.html' },
@@ -82,21 +87,21 @@ function classNames(...classes) {
 
 export default function Headers() {
 
-    const [top, setTop] = useState(true);
+  const [top, setTop] = useState(true);
 
-    // detect whether user has scrolled the page down by 10px
-    useEffect(() => {
-        const scrollHandler = () => {
-            window.pageYOffset > 10 ? setTop(false) : setTop(true)
-        };
-        window.addEventListener('scroll', scrollHandler);
-        return () => window.removeEventListener('scroll', scrollHandler);
-    }, [top]);
+  // detect whether user has scrolled the page down by 10px
+  useEffect(() => {
+    const scrollHandler = () => {
+      window.pageYOffset > 10 ? setTop(false) : setTop(true)
+    };
+    window.addEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, [top]);
 
   return (
     <Popover
-    className={`bg-white fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-lg'}`}>
-            
+      className={`bg-white fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-lg'}`}>
+
       <div className="px-4 mx-auto max-w-7xl sm:px-6">
         <div className="flex items-center justify-between py-6 border-b-2 border-gray-100 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -117,7 +122,7 @@ export default function Headers() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-             {/* <Popover className="relative">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -223,7 +228,7 @@ export default function Headers() {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                           {resources.map((item) => (
-                            <a 
+                            <a
                               key={item.name}
                               href={item.href}
                               target="_blank"
@@ -274,7 +279,7 @@ export default function Headers() {
             >
               注 册
             </a> */}
-            <a target="_blank" 
+            <a target="_blank"
               href="https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/"
               className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
             >
@@ -328,7 +333,7 @@ export default function Headers() {
             </div>
             <div className="px-5 py-6 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                
+
                 <Link to="/matriculate" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   录取查询
                 </Link>
@@ -337,9 +342,10 @@ export default function Headers() {
                   通知书单号查询
                 </Link>
                 {resources.map((item) => (
-                  <a 
+                  <a
                     key={item.name}
                     href={item.href}
+                    target="_blank"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {item.name}
@@ -347,7 +353,7 @@ export default function Headers() {
                 ))}
               </div>
               <div>
-              <a target="_blank" 
+                <a target="_blank"
                   href="https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/"
                   className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
                 >
