@@ -348,7 +348,12 @@ export default function Headers() {
                     target="_blank"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
-                    {item.name}
+                    {/* {item.name} */}
+                    <item.icon className="flex-shrink-0 w-6 h-6 text-indigo-600" aria-hidden="true" />
+                    <div className="ml-4">
+                      <p className="text-base font-medium text-gray-900">{item.name}</p>
+                      <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                    </div>
                   </a>
                 ))}
               </div>

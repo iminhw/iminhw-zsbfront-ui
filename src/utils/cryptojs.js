@@ -1,6 +1,6 @@
 import CryptoJS from "crypto-js";
-
-const key = CryptoJS.enc.Utf8.parse("Iminhw123123qw11");
+const keyStr = "JK6wxIfrOleaU2Em";
+const key = CryptoJS.enc.Utf8.parse(keyStr);
 
 //解密方法
 export function decrypt(word) {

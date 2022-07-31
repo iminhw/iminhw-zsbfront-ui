@@ -6,6 +6,11 @@ function Testimonials() {
   return (
     <section className="relative">
 
+      {/* Section background (needs .relative class on parent and next sibling elements) */}
+      <div className="absolute inset-0 mb-16 bg-gray-100 pointer-events-none" aria-hidden="true"></div>
+      <div className="absolute left-0 right-0 w-px h-20 p-px m-auto transform -translate-y-1/2 bg-gray-200"></div>
+
+
       {/* Illustration behind content */}
       <div className="absolute bottom-0 -mb-32 transform -translate-x-1/2 pointer-events-none left-1/2" aria-hidden="true">
         <svg width="1760" height="518" viewBox="0 0 1760 518" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +52,7 @@ function Testimonials() {
                   "sweetalert2",
                   "sass",
                   "tailwindcss",
-                  "vite"
+                  "vite"等
                 </blockquote>
                 <cite className="block mb-1 text-lg not-italic font-bold">i MinHw</cite>
                 <div className="text-gray-600">

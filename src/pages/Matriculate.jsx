@@ -10,23 +10,27 @@ import { getMatriculate } from '@/api/getmat'
 
 
 function Matriculate() {
-  
-  const handleSubmit = ()=>{
+
+  const handleSubmit = () => {
     const ksh = document.getElementById("ksh").value;
-  if(!ksh || ksh.trim() == "") {
-    console.log("考生号异常");
-    Swal.fire({
-      title: "查不到您的任何信息",
-      icon: "error",
-    });
-    return false;
-  }
+    if (!ksh || ksh.trim() == "") {
+      // console.log("考生号异常");
+      Swal.fire({
+        icon: "error",
+        title: "考生号不能为空",
+        toast: true,
+        position: 'top',
+        timer: 3000,
+        showConfirmButton: false,
+      });
+      return false;
+    }
     getMatriculate(ksh).then((response) => {
-      if (response.data){
+      if (response.data) {
         const data = response.data;
         Swal.fire({
           icon: "success",
-          title: data.xm + "您被我校 " + data.zy + " 录取",
+          title: data.xm + "，您被我校 " + data.zy + " 录取",
         });
       } else {
         Swal.fire({
@@ -56,7 +60,7 @@ function Matriculate() {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form method='post' onSubmit={()=>false}>
+                <form method='post' onSubmit={() => false}>
                   <div className="flex flex-wrap mb-4 -mx-3" data-aos="zoom-y-out" data-aos-delay="150">
                     <div className="w-full px-3" data-aos="zoom-y-out" data-aos-delay="150">
                       <label className="block mb-1 text-sm font-medium text-gray-800" htmlFor="ksh">考生号</label>
@@ -71,7 +75,7 @@ function Matriculate() {
                   </div>
                 </form>
 
-                
+
               </div>
 
             </div>

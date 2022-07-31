@@ -10,23 +10,11 @@ import { getMatKddh, validTest } from '@/api/getmat'
 
 
 function Advice() {
-  // utf-8转换base64字符串
-  const utf8_to_base64 = (str) => window.btoa(encodeURIComponent(str));
-  // base64转换utf-8字符串
-  const base64_to_utf8 = (str) => decodeURIComponent(window.atob(str));
-
 
   const handleSubmit = () => {
     const ksh = document.getElementById("ksh").value;
-    const encodeInfo = utf8_to_base64(utf8_to_base64(ksh));
-
-    console.log(encodeInfo);
-
-    const decodeInfo = base64_to_utf8(base64_to_utf8(encodeInfo));
-    console.log(decodeInfo);
-
     if (!ksh || ksh.trim() == "") {
-      console.log("考生号异常");
+      // console.log("考生号异常");
       Swal.fire({
         icon: "error",
         title: "考生号不能为空",
@@ -43,8 +31,8 @@ function Advice() {
         const data = response.data;
         Swal.fire({
           icon: "success",
-          title: data.xm + "您的通知书快递单号 " + data.kddh,
-          footer: '<a href="https://www.ems.com.cn/queryList" target="_blank">EMS单号查询</a>',
+          title: data.xm + "，您的通知书快递单号 " + data.kddh,
+          footer: `<a href="https://www.kuaidi100.com/chaxun?com=ems&nu=${data.kddh}" target="_blank">点击查询物流信息</a>`,
         });
       } else {
         Swal.fire({
@@ -98,7 +86,7 @@ function Advice() {
                       找不到用查询的通知书的方法？<p>通过此页面得到自己通知书的快递单号，像查普通快递一样。</p>
                     </li>
                     <li>
-                      有了快递单号还是不会查询？<p>点击直接访问<a className='text-red-300' href='https://www.ems.com.cn/queryList' target="_black">ems查询页面</a>查询，或直接百度快递单号。</p>
+                      点击直接查看物流信息报错？<p>点击直接访问<a className='text-red-300' href='https://www.ems.com.cn/queryList' target="_black">ems查询页面</a> 输入得到的快递单号进行查询。</p>
                     </li>
                   </ol>
                 </div>
