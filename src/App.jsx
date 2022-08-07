@@ -18,6 +18,23 @@ import NotFound from './pages/NotFound';
 function App() {
 
   const location = useLocation();
+  console.log(
+    "%c 招生办查询系统 %c v1.5.0 ",
+    "color:#fff;background-color:blue;line-height:20px;border-radius: 5px 0 0 5px",
+    "color:#fff;background-color:orange;line-height:20px;border-radius: 0 5px 5px 0"
+  );
+  
+  console.log(
+    "%c Developer Email %c iminhw@qq.com ",
+    "line-height:20px;background-color:blue;color:#fff; border-radius: 5px 0 0 5px",
+    "line-height:20px; background-color:#008000; color:#fff; border-radius: 0 5px 5px 0"
+  );
+  
+  console.log(
+    "%c%c Any sufficiently advanced technology, at first glance, is indistinguishable from magic! ",
+    "line-height:20px;color:#000;",
+    "line-height:20px;background-image:-webkit-gradient(linear,left top,right top,color-stop(0,#ff22ff),color-stop(1,#5500ff));color:transparent;-webkit-background-clip:text;color:#fff; border-radius:5px;"
+  );
 
   useEffect(() => {
     AOS.init({

@@ -25,7 +25,6 @@ export function getMatKddh(ksh) {
 }
 
 export function validTest(data) {
-  console.log(data)
   return request({
     url: "/stu/test",
     method: "post",

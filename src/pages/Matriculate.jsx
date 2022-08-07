@@ -60,7 +60,7 @@ function Matriculate() {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form method='post' onSubmit={() => false}>
+                {/* <form action='#' onSubmit={handleSubmit}> */}
                   <div className="flex flex-wrap mb-4 -mx-3" data-aos="zoom-y-out" data-aos-delay="150">
                     <div className="w-full px-3" data-aos="zoom-y-out" data-aos-delay="150">
                       <label className="block mb-1 text-sm font-medium text-gray-800" htmlFor="ksh">考生号</label>
@@ -73,7 +73,7 @@ function Matriculate() {
                       <button type='button' onClick={handleSubmit} className="w-full text-white bg-blue-600 btn hover:bg-blue-700">查 询</button>
                     </div>
                   </div>
-                </form>
+                {/* </form> */}
 
 
               </div>
