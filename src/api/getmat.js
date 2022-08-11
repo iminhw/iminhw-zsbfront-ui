@@ -10,17 +10,23 @@ import request from "@/utils/request";
 // }
 
 // // 查询录取数据详细
-export function getMatriculate(ksh) {
+export function getMatriculate(query) {
   return request({
-    url: "/stu/matriculate/" + ksh,
-    method: "get",
+    url: "/stu/matriculate",
+    method: "post",
+    data: query,
   });
 }
 
-export function getMatKddh(ksh) {
+export function getMatKddh(data) {
+  // return request({
+  //   url: "/stu/outnotification/" + ksh,
+  //   method: "get",
+  // });
   return request({
-    url: "/stu/outnotification/" + ksh,
-    method: "get",
+    url: "/stu/outnotification",
+    method: "post",
+    data,
   });
 }
 

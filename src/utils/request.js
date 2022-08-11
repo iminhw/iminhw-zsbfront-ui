@@ -64,7 +64,6 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(res => {
-    // console.log("res", res);
     const rs = JSON.parse(decrypt(res.data));
     // 未设置状态码则默认成功状态
     const code = rs.code || 200;
@@ -110,7 +109,7 @@ service.interceptors.response.use(res => {
       timer:  5 * 1000,
       showConfirmButton: false,
     });
-    // console.log(message);
+    console.log(message);
     return Promise.reject(error)
   }
 )

@@ -13,8 +13,8 @@ function Advice() {
 
   const handleSubmit = () => {
     const ksh = document.getElementById("ksh").value;
+    const sfzh = document.getElementById("sfzh").value;
     if (!ksh || ksh.trim() == "") {
-      // console.log("考生号异常");
       Swal.fire({
         icon: "error",
         title: "考生号不能为空",
@@ -25,7 +25,18 @@ function Advice() {
       });
       return false;
     }
-    getMatKddh(ksh).then((response) => {
+    if (!sfzh || sfzh.trim() == "") {
+      Swal.fire({
+        icon: "error",
+        title: "身份证号不能为空",
+        toast: true,
+        position: 'top',
+        timer: 3000,
+        showConfirmButton: false,
+      });
+      return false;
+    }
+    getMatKddh({ksh, sfzh}).then((response) => {
       if (response.data) {
         const data = response.data;
         Swal.fire({
@@ -57,7 +68,7 @@ function Advice() {
 
               {/* Page header */}
               <div className="max-w-3xl pb-12 mx-auto text-center md:pb-20 " data-aos="zoom-y-out" data-aos-delay="50">
-                <h2 className="h2">输入您的考生号或高考报名号，可以查询您通知书快递单号</h2>
+                <h2 className="h2">输入您的考生号和身份证号，查询您通知书快递单号</h2>
               </div>
 
               {/* Form */}
@@ -69,8 +80,14 @@ function Advice() {
                       <input id="ksh" type="text" className="w-full text-gray-800 form-input" placeholder="请输入您的考生号" required />
                     </div>
                   </div>
+                  <div className="flex flex-wrap mb-4 -mx-3" data-aos="zoom-y-out" data-aos-delay="250">
+                    <div className="w-full px-3" data-aos="zoom-y-out" data-aos-delay="250">
+                      <label className="block mb-1 text-sm font-medium text-gray-800" htmlFor="sfzh">身份证号</label>
+                      <input id="sfzh" type="text" className="w-full text-gray-800 form-input" placeholder="请输入您的身份证号" required />
+                    </div>
+                  </div>
 
-                  <div className="flex flex-wrap mt-6 -mx-3" data-aos="zoom-y-out" data-aos-delay="250">
+                  <div className="flex flex-wrap mt-6 -mx-3" data-aos="zoom-y-out" data-aos-delay="350">
                     <div className="w-full px-3">
                       <button type='button' onClick={handleSubmit} className="w-full text-white bg-blue-600 btn hover:bg-blue-700">查 询</button>
                     </div>
