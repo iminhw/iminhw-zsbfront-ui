@@ -3,10 +3,10 @@ import { Fragment, React, useState, useEffect } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { Link } from 'react-router-dom';
 import {
-  BookmarkAltIcon,
+  // BookmarkAltIcon,
   CalendarIcon,
   // ChartBarIcon,
-  // CursorClickIcon,
+  CursorClickIcon,
   MenuIcon,
   // PhoneIcon,
   // PlayIcon,
@@ -52,21 +52,21 @@ import logo from '@/images/favicon.png'
 const resources = [
   {
     name: '帮助中心',
-    description: '在没有充斥推销信息的QQ群里面寻求帮助',
+    description: '点击加入在没有充斥推销信息的QQ群（643136187）里面寻求帮助',
     href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
     icon: SupportIcon,
   },
   {
-    name: '使用指南',
-    description: '点击入群查看详细使用方案',
-    href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
-    icon: BookmarkAltIcon,
-  },
-  {
     name: 'BUG反馈',
-    description: '点击入群向开发者反馈您碰到的问题',
+    description: '点击入群（643136187）向开发者反馈您碰到的问题',
     href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
     icon: CalendarIcon,
+  },
+  {
+    name: '加入我们',
+    description: '点击入群（643136187）申请加入招生办助理团（限当年新生）',
+    href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
+    icon: CursorClickIcon,
   },
   // {
   //   name: '安全',
@@ -75,11 +75,11 @@ const resources = [
   //   icon: ShieldCheckIcon
   // },
 ]
-const recentPosts = [
-  { id: 1, name: '2022年成都航空职业技术学院录取与通知书邮寄进度查询', href: 'https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/zsbzsdt/202207/t20220711_132960.html' },
-  { id: 2, name: '成都航空职业技术学院2022年报考指南', href: 'https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/zsbzsdt/202206/t20220606_131830.html' },
-  { id: 3, name: '我在这里等你，共赴一场成航之约！', href: 'https://mp.weixin.qq.com/s/zBKwz39MOiItPH7IXSJFgw' },
-]
+// const recentPosts = [
+//   { id: 1, name: '2022年成都航空职业技术学院录取与通知书邮寄进度查询', href: 'https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/zsbzsdt/202207/t20220711_132960.html' },
+//   { id: 2, name: '成都航空职业技术学院2022年报考指南', href: 'https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/zsbzsdt/202206/t20220606_131830.html' },
+//   { id: 3, name: '我在这里等你，共赴一场成航之约！', href: 'https://mp.weixin.qq.com/s/zBKwz39MOiItPH7IXSJFgw' },
+// ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -190,7 +190,7 @@ export default function Headers() {
               首页
             </Link>
             <Link to="/matriculate" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              录取查询
+              录取专业查询
             </Link>
             <Link to="/advice" className="text-base font-medium text-gray-500 hover:text-gray-900">
               通知书单号查询
@@ -335,7 +335,7 @@ export default function Headers() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
 
                 <Link to="/matriculate" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  录取查询
+                  录取专业查询
                 </Link>
 
                 <Link to="/advice" className="text-base font-medium text-gray-900 hover:text-gray-700">

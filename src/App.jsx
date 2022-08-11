@@ -19,7 +19,7 @@ function App() {
 
   const location = useLocation();
   console.log(
-    "%c 招生办查询系统 %c v1.5.0 ",
+    "%c 招生办查询系统 %c v0.8.0 ",
     "color:#fff;background-color:blue;line-height:20px;border-radius: 5px 0 0 5px",
     "color:#fff;background-color:orange;line-height:20px;border-radius: 0 5px 5px 0"
   );

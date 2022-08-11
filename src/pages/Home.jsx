@@ -2,10 +2,10 @@ import React from 'react';
 
 import Headers from '@/partials/Headers'
 import HeroHome from '@/partials/HeroHome';
-// import FeaturesHome from '@/partials/Features';
-// import FeaturesBlocks from '@/partials/FeaturesBlocks';
+import FeaturesHome from '@/partials/Features';
+import FeaturesBlocks from '@/partials/FeaturesBlocks';
 import Testimonials from '@/partials/Testimonials';
-// import Newsletter from '@/partials/Newsletter';
+import Newsletter from '@/partials/Newsletter';
 import Footer from '@/partials/Footer';
 
 function Home() {

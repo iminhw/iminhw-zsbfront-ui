@@ -54,10 +54,10 @@ function Testimonials() {
                   "tailwindcss",
                   "vite"等
                 </blockquote>
-                <cite className="block mb-1 text-lg not-italic font-bold">i MinHw</cite>
+                {/* <cite className="block mb-1 text-lg not-italic font-bold">i MinHw</cite>
                 <div className="text-gray-600">
                   <span>学生 & 开发者 @</span><a className="text-blue-600 hover:underline" href="/">首页</a>
-                </div>
+                </div> */}
               </div>
 
             </div>

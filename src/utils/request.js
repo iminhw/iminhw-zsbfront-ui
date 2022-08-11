@@ -64,14 +64,15 @@ service.interceptors.request.use(config => {
 
 // 响应拦截器
 service.interceptors.response.use(res => {
-
+    // console.log("res", res);
+    const rs = JSON.parse(decrypt(res.data));
     // 未设置状态码则默认成功状态
-    const code = res.data.code || 200;
+    const code = rs.code || 200;
     // 获取错误信息
-    const msg = errorCode[code] || res.data.message || errorCode['default']
+    const msg = errorCode[code] || rs.message || errorCode['default']
     // 二进制数据则直接返回
     if(res.request.responseType ===  'blob' || res.request.responseType ===  'arraybuffer'){
-      return JSON.parse(decrypt(res.data));
+      return rs;
     }
     if (code === 500) {
       Swal.fire({
@@ -86,7 +87,7 @@ service.interceptors.response.use(res => {
     } else if (code !== 200) {
       return Promise.reject('error')
     } else {
-      return  Promise.resolve(JSON.parse(decrypt(res.data)))
+      return  Promise.resolve(rs)
     }
   },
   error => {
