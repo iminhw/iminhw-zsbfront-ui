@@ -38,36 +38,37 @@ function Footer() {
                 />
               </Link>
             </div>
+
             <div className="text-sm text-gray-600">
-              <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 hover:underline">成航</Link> · <Link to="#" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 hover:underline">招生办公室</Link>
+              <a href="https://www.cap.edu.cn/campus/sy_new/" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 hover:underline" >成航</a> · <a href='https://www.cap.edu.cn/campus/jgsz/gljg/dzqbm/zsb2022/' target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 hover:underline">招生办公室</a>
             </div>
           </div>
 
           {/* 2nd block */}
-          <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="mb-2 font-medium text-gray-800">录取专业查询</h6>
+          <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
+            <h6 className="mb-2 font-medium text-gray-800">友情链接</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口1</Link>
+              <Link to="/" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">首页</Link>
               </li>
               <li className="mb-2">
-                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口2</Link>
+                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">录取专业查询</Link>
               </li>
               <li className="mb-2">
-                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口3</Link>
+                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">通知书单号查询</Link>
               </li>
               <li className="mb-2">
-                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口4</Link>
+                <a href="https://www.sceea.cn" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">四川省教育考试院</a>
               </li>
               <li className="mb-2">
-                <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口5</Link>
+                <a href="https://lib.cap.edu.cn/" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">成航图书馆</a>
               </li>
             </ul>
           </div>
 
           {/* 3rd block */}
-          <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="mb-2 font-medium text-gray-800">录取专业查询</h6>
+          {/* <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
+            <h6 className="mb-2 font-medium text-gray-800">查询入口</h6>
             <ul className="text-sm">
               <li className="mb-2">
                 <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口1</Link>
@@ -85,34 +86,34 @@ function Footer() {
                 <Link to="/matriculate" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口5</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* 4th block */}
-          <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h6 className="mb-2 font-medium text-gray-800">通知书单号查询</h6>
+          <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
+            <h6 className="mb-2 font-medium text-gray-800">技术栈</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口1</Link>
+                <a href="https://www.sass.hk" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Sass</a>
               </li>
               <li className="mb-2">
-                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口2</Link>
+                <a href="https://react.docschina.org" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">React</a>
               </li>
               <li className="mb-2">
-                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口3</Link>
+                <a href="https://echarts.apache.org/zh/index.html" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Apache ECharts</a>
               </li>
               <li className="mb-2">
-                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口4</Link>
+                <a href="https://www.tailwindcss.cn" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Tailwind CSS </a>
               </li>
               <li className="mb-2">
-                <Link to="/advice" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">查询入口5</Link>
+                <a href="https://vitejs.cn" target="_blank" className="text-gray-600 transition duration-150 ease-in-out hover:text-gray-900">Vite</a>
               </li>
             </ul>
           </div>
 
           {/* 5th block */}
           <div className="sm:col-span-6 md:col-span-3 lg:col-span-3">
-            <h6 className="mb-2 font-medium text-gray-800">需要帮助？</h6>
-            <p className="mb-4 text-sm text-gray-600">请给开发者发一封友好说明您问题的邮件</p>
+            <h6 className="mb-2 font-medium text-gray-800">有好的建议？</h6>
+            <p className="mb-4 text-sm text-gray-600">请给开发者发一封友好说明您意见的邮件</p>
             <form onSubmit={handleSeedEm}>
               <div className="flex flex-wrap mb-4">
                 <div className="w-full">

@@ -50,12 +50,12 @@ import logo from '@/images/favicon.png'
 //   { name: '联系销售', href: '#', icon: PhoneIcon },
 // ]
 const resources = [
-  {
-    name: '帮助中心',
-    description: '点击加入在没有充斥推销信息的QQ群（643136187）里面寻求帮助',
-    href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
-    icon: SupportIcon,
-  },
+  // {
+  //   name: '帮助中心',
+  //   description: '点击加入在没有充斥推销信息的QQ群（643136187）里面寻求帮助',
+  //   href: 'https://qm.qq.com/cgi-bin/qm/qr?k=grSiTcUS11M8PWdL40cgb0jHmrrF1ESQ&jump_from=webapi',
+  //   icon: SupportIcon,
+  // },
   {
     name: 'BUG反馈',
     description: '点击入群（643136187）向开发者反馈您碰到的问题',

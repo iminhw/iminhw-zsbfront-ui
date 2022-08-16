@@ -44,15 +44,7 @@ function Testimonials() {
                   <img className="relative rounded-full" src={TestimonialImage} width="96" height="96" alt="Testimonial 01" />
                 </div>
                 <blockquote className="mb-4 text-xl font-medium">
-                  “你当前看到的小程序选用的主要技术栈有，
-                  "aos",
-                  "axios",
-                  "react",
-                  "sticky-js",
-                  "sweetalert2",
-                  "sass",
-                  "tailwindcss",
-                  "vite"等
+                  “I sit at my window this morning where the world like a passer-by stops for a moment, nods to me and goes.”
                 </blockquote>
                 {/* <cite className="block mb-1 text-lg not-italic font-bold">i MinHw</cite>
                 <div className="text-gray-600">
