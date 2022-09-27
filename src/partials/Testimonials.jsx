@@ -1,6 +1,8 @@
 import React from 'react';
 
 import TestimonialImage from '@/images/testimonial.jpg';
+import aircraft from '@/images/aircraft.png';
+import zfbhb from '@/images/zfbhb.jpg';
 
 function Testimonials() {
   return (
@@ -28,10 +30,10 @@ function Testimonials() {
         </svg>
       </div>
 
-      <div className="max-w-6xl px-4 mx-auto sm:px-6">
-        <div className="py-12 md:py-20">
+      <div className="max-w-6xl px-4 mx-auto sm:px-6" >
+        <div className="py-12 md:py-20" >
 
-          {/* Testimonials */}
+          {/* Testimonials  */}
           <div className="max-w-3xl mx-auto mt-20" data-aos="zoom-y-out">
             <div className="relative flex items-start bg-white border-2 border-gray-200 rounded">
 
@@ -46,10 +48,12 @@ function Testimonials() {
                 <blockquote className="mb-4 text-xl font-medium">
                   “I sit at my window this morning where the world like a passer-by stops for a moment, nods to me and goes.”
                 </blockquote>
-                {/* <cite className="block mb-1 text-lg not-italic font-bold">i MinHw</cite>
-                <div className="text-gray-600">
-                  <span>学生 & 开发者 @</span><a className="text-blue-600 hover:underline" href="/">首页</a>
-                </div> */}
+                <cite className="block mb-1 text-lg not-italic font-bold">试试你的手气如何</cite>
+                <div>
+                  {/*<span>学生 & 开发者 @</span><a className="text-blue-600 hover:underline" href="/">首页</a>*/}
+                  <img className="mx-auto" src={zfbhb} width="50%"  />
+                </div>
+
               </div>
 
             </div>
